@@ -9,7 +9,9 @@ StatsCollector::StatsCollector() {
 
 StatsCollector::~StatsCollector() {
     delete total;
-    delete[] responseTimeArray;
+    for (int i = 0; i < MAX_RESPONSE_SIZE_IN_MS; ++i) {
+        if (responseTimeArray[i] != nullptr) delete responseTimeArray[i];
+    }
 }
 
 void StatsCollector::PushValue(int value) {
