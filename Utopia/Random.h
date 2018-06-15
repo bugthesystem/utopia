@@ -4,7 +4,7 @@
 #include <random>
 #include <iostream>
 
-//cpp11 random gen mechanism is recommended since ats::rand considered as harmful
+//cpp11 random gen mechanism is recommended since rand() is considered as harmful
 class Random {
 public:
     Random() : engine(std::random_device{}()) {}
