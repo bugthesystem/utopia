@@ -3,7 +3,7 @@
 #
 cmake_minimum_required (VERSION 3.8)
 
-project ("Metrigo")
+project ("Utopia")
 
 # Include sub-projects.
-add_subdirectory ("Metrigo")
+add_subdirectory ("Utopia")
