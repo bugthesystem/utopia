@@ -4,10 +4,10 @@
 
 #include "Constants.h"
 
-class StatsCalculator {
+class StatsCollector {
 public:
-	StatsCalculator();
-	~StatsCalculator();
+	StatsCollector();
+	~StatsCollector();
 	long long GetMedian();
 	long long GetAverage();
 
@@ -16,9 +16,11 @@ public:
 	void Dump();
 
 private:
-	
 	int * responseTimeArray[MAX_RESPONSE_SIZE_IN_MS] = { nullptr };
-	long long *total = nullptr;
+	long long *total;
+
+private:
+	int GetNext(int index);
 };
 
 
